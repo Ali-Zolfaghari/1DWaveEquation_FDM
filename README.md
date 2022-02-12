@@ -7,3 +7,6 @@ The wave equation is a linear partial differential equation for the description 
 - 5 : BEAMWARMING
 - 6 : DAMPED-BEAMWARMING
 
+![image](https://user-images.githubusercontent.com/77577542/153709000-cc5ed79c-461e-4830-ba14-f251ea9ea1dc.png)
+
+
