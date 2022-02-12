@@ -1,8 +1,44 @@
 
-clear,clc
-close all
+%***************************************************************************************************
+%*   Solve 1D wave equation by presented code.
+%*   I take no responsibilities for any errors in the code or damage thereby.
+%*   Please notify me at zolfaghari1992iut@gmail.com if the code is used in any type of application.
+%***************************************************************************************************
+%*   Developer   : Ali Zolfaghari Sichani (06-06-2015)
+%***************************************************************************************************
+%*   References  : 
+%*   Computational Fluid Mechanics and Heat Transfer.
+%*   by John C. Tannehill (Author), Dale Anderson (Author), Richard H. Pletcher (Author).
+%***************************************************************************************************
+%*   Linear Wave Equation in one-dimensional domain. (solving by finite difference schemes)   :   
+%*   Ut + CUx = 0
+%*   1 : UPWIND
+%*   2 : LEAPFROG
+%*   3 : LAXWENDROFF
+%*   4 : LAX
+%*   5 : BEAMWARMING
+%*   6 : DAMPED-BEAMWARMING
+%*   Inputs      :
+%*   C            (wave speed                    )
+%*   NPoint       (number of division of domain  )
+%*   L            (length of domain              )
+%*   STime        (final time                    )
+%*   Epsilon_e    (damping factor                )
+%*   Epsilon_i    (damping factor                )
+%*   CFL          (Courant number                )
+%*   Alpha        (initial wave factor           )
+%*   BetaI        (initial wave factor           )
+%*   Outputs     :
+%*   plot numerical solutions
+%***************************************************************************************************
 
 
+clear,clc,close all
+format compact
+format long
+
+
+% input
 L = 4.0;
 C = 1.0;
 Alpha = 5.0;
@@ -10,10 +46,10 @@ BetaI = pi/25.0;
 STime = 2.0;
 Epsilon_e = 0.01;
 Epsilon_i = 0.01;
-NPoint = [128 ];
+NPoint = [128];
 NP = 320;
-BVal = [0.25*pi ];
-CFL = [0.25 ];
+BVal = [0.25*pi];
+CFL = [0.25];
 INIT_Name = {'SIN','STEP','EXP'};
 METHOD_Name = {'UPWIND','LEAPFROG','LAXWENDROFF','LAX','BEAMWARMING','DAMPED-BEAMWARMING'};
 
